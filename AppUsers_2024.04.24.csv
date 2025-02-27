@@ -1,0 +1,262 @@
+﻿CDSContactID,CDSStatus,RegistrationStatus,RequestedDate,CDSContactType,LanguageCode,TradingApp,PayingApp,BuyingApp,Satisfaction_TradingApp,Satisfaction_PayingApp,Satisfaction_BuyingApp
+07455302-f9a8-456b-bd8e-6d7568037bb6,Active,Activated,44369.4774,Customer,en,Registered,Registered,NULL,1,1,4
+08665b20-3d9d-461d-96fa-b1d3f606d5c0,Inactive,Invited,44691.83072,Customer,en,Registered,Registered,NULL,1,1,3
+17511ebc-bf1a-49a9-84c2-d1d32f520525,Active,Activated,43347.66769,Customer,en,Registered,Registered,NULL,1,1,2
+2bedb9fa-1f8b-49a8-9c32-266bba283a41,Active,Activated,42545.69522,Customer,pt,Registered,Registered,NULL,1,1,3
+4fb155e7-a256-4a56-b84f-0437f7dda435,Active,Activated,43252.7452,Customer,en,Registered,Registered,NULL,1,1,3
+6aa0caa8-4441-4a56-934b-47337a305c58,Active,Activated,44736.63281,Customer,en,Registered,No Access,NULL,1,1,3
+8aa391c8-d4ce-413c-a468-498f89024dae,Active,Activated,44105.40165,Customer,en,Registered,No Access,NULL,1,1,4
+b9ed81ce-e424-48fc-a171-cd0efc303ff0,Active,Activated,44347.65044,Customer,pt,Registered,Registered,NULL,1,1,4
+109d5a31-6739-4b7c-bedf-398e218a1bc6,Active,Activated,43713.7941,Customer,en,Registered,Registered,NULL,2,1,3
+15ff08f4-80a3-4291-808b-e06e344caf64,Active,Activated,42782.74108,Customer,pt,Registered,Registered,NULL,2,1,1
+1b03f89c-2bbf-40a1-b531-c27b8e8b93db,Active,Activated,43683.96364,Customer,en,Registered,Registered,NULL,3,1,4
+2c6607a2-17b3-4a51-ae1f-5edefe2c0e40,Inactive,Invited,45143.1325,Customer,pt,Registered,Registered,NULL,1,1,4
+2c7d7144-22d1-467c-b749-64b387336a62,Inactive,Invited,44862.62629,Customer,en,Registered,Registered,NULL,1,1,3
+b51fda8e-d1fa-4745-812c-8fb13f37b705,Active,Activated,41773.83105,Customer,en,Registered,Registered,NULL,1,1,5
+f8a28711-245c-42ad-9780-3669c86669bb,Active,Activated,42872.73206,Customer,en,Registered,Registered,NULL,1,1,
+3ac9d512-35ea-4b9b-a686-557682f6ec28,Active,Activated,42374.8638,Introducing Broker,en,Registered,Registered,NULL,1,1,
+013d3210-95c0-4da8-90c9-f277eba80d47,Active,Activated,44109.15102,Consultant,en,Registered,Registered,NULL,1,2,2
+1a5af993-cdbb-4a6a-aa68-5e23319190cf,Active,Activated,44216.63384,Consultant,pt,Registered,Registered,NULL,1,2,4
+2de13b20-782c-4b63-921f-1aded86aa0f4,Active,Activated,45048.51166,Consultant,pt,Registered,Registered,NULL,1,2,3
+62d6739f-2f97-4fec-8b2c-2df6c6729ee3,Inactive,Invited,44937.01529,Consultant,en,Registered,Registered,NULL,1,2,5
+ac8a7b5d-d00d-4e21-8203-463b191883a6,Inactive,Invited,45142.98882,Consultant,pt,Registered,Registered,NULL,1,2,2
+f2d2bfc2-73e5-44db-a100-b66059e074c5,Inactive,Invited,44862.70642,Consultant,en,Registered,Registered,NULL,1,2,1
+04c262b5-0deb-4490-a478-6cba3e6b7564,Active,Activated,42352.91317,Customer,en,Registered,Registered,NULL,1,2,1
+0bfb4353-1608-4675-98df-8e6699e26f0d,Inactive,Invited,44216.91599,Customer,es,Registered,Registered,NULL,1,2,1
+4dd71c7e-0195-4169-ab4e-c8437cb25672,Active,Activated,44809.51706,Customer,pt,Registered,Registered,NULL,1,2,1
+a97ba2f4-f22d-4f11-913b-f3e43c890eee,Active,Activated,44714.76963,Customer,en,Registered,Registered,NULL,1,2,
+ba280114-b7ce-4924-a7cd-67933d81dce1,Active,Activated,42412.62527,Customer,en,Registered,Registered,NULL,1,2,3
+d4923690-0920-4166-b033-bedc0ef0bcff,Inactive,Invited,44638.78398,Customer,en,Registered,Registered,NULL,1,2,3
+dabcdab3-2c99-4c8f-bc74-6fdf9cc42c59,Active,Activated,42544.67426,Customer,en,Registered,Registered,NULL,1,2,1
+deb558e6-dd09-4165-a501-77fc7b8768ed,Active,Activated,41961.65897,Customer,en,Registered,Registered,NULL,1,2,5
+effffb19-cd11-43b2-a5df-42492939c8e7,Inactive,Invited,45005.63633,Customer,en,Registered,Registered,NULL,1,2,
+f0ed3056-43d7-439c-9754-93f301e817d8,Active,Activated,44092.66695,Customer,en,Registered,Registered,NULL,1,2,
+fa1bc58d-8f78-4542-913b-d0713ef38aa3,Active,Activated,43504.6243,Customer,en,Registered,Registered,NULL,1,2,
+0042c203-0ee7-44e7-8586-a76fb60d3027,Inactive,Invited,44105.40006,Customer,en,Registered,Registered,NULL,2,2,5
+130f7e46-83f8-4e29-a01a-993eaa4c8f0e,Active,Activated,42507.71757,Customer,en,Registered,Registered,NULL,2,2,1
+8589fb40-712b-4059-81d2-e83dd250fc5b,Active,Activated,42170.55254,Customer,en,Registered,No Access,NULL,2,2,4
+9c0a56ad-88e5-4f0f-ab60-76e0a7ba58a4,Inactive,Invited,44631.97776,Customer,en,Registered,Registered,NULL,2,2,
+c783ba01-74a3-452d-b613-64eac019ae4e,Inactive,Invited,44093.70548,Customer,en,Registered,Pending Deactivation,NULL,2,2,5
+a016823f-8eee-450c-894e-1aa091288ec8,Active,Activated,45113.79975,Customer,pt,Registered,Registered,NULL,1,2,
+b9d9cf9f-1335-40cc-a8bc-5719f838a832,Active,Activated,44725.58085,Customer,pt,Registered,Registered,NULL,3,2,2
+d7976cd5-4839-428b-a078-9d5d3d31f0ec,Active,Activated,44630.67738,Customer,en,Registered,Registered,NULL,3,2,4
+e349688f-a5c1-405f-b812-878518f9dacd,Active,Activated,43615.76985,Customer,pt,Registered,Registered,NULL,3,2,2
+2310623a-6ba9-4359-aff0-6f93a4882d3e,Active,Activated,44690.38882,Customer,pt,Registered,Registered,NULL,4,2,4
+261e8057-56d2-4651-b04b-07f37d019990,Inactive,Invited,45154.85943,Customer,en,Registered,Registered,NULL,4,2,2
+006d9f2f-d0a9-4faa-9545-81760a758406,Inactive,Invited,41470.62891,Customer,fr,Registered,Registered,NULL,,2,3
+e258d300-9ed1-4688-b7a1-16bb1a52be10,Active,Activated,42646.75193,Consultant,en,Registered,Registered,NULL,1,3,4
+09c753df-794d-41bf-8bd6-3317746d1472,Inactive,Invited,44096.76611,Customer,en,Registered,Registered,NULL,1,3,2
+8a8c7692-2202-4850-a320-25b404b5e437,Active,Activated,44896.89701,Customer,en,Registered,No Access,NULL,1,3,4
+a7577724-7ae3-410a-acc9-6f8f2663f099,Active,Activated,44224.86122,Customer,es,Registered,Registered,NULL,1,1,
+aae6209a-5458-4324-b39f-11108a80eea6,Inactive,Invited,43917.80281,Customer,en,Registered,Registered,NULL,1,3,
+cd82b638-3a27-4f2c-8af3-e5aba12e7809,Active,Activated,40996.59126,Customer,fr,Registered,Registered,NULL,1,1,4
+84758282-0d67-4da8-a21e-24b8e070e9f6,Active,Activated,45064.78703,Introducing Broker,en,Registered,No Access,NULL,1,3,
+9136c43b-b386-418a-9cab-b774aff30f8e,Active,Activated,42872.71084,Introducing Broker,en,Registered,Registered,NULL,1,3,
+10c9b248-a544-443a-a30c-af2a6fc7b80b,Active,Activated,44018.69016,Customer,pt,Registered,Registered,NULL,2,1,3
+7f3f6b47-66d2-483f-81c4-faa35ee48abc,Inactive,Invited,45112.84694,Customer,es,Registered,No Access,NULL,2,3,1
+8a64f4d0-f612-491f-b84f-4ad5c0b9c0a2,Active,Activated,43917.82504,Customer,en,Registered,No Access,NULL,2,3,4
+06ceac32-f311-4538-a664-03153706ead3,Inactive,Invited,44782.20963,Customer,en,Registered,Registered,NULL,3,3,1
+3a2d530a-b4fb-4e5d-b7f2-ebe3550d6063,Active,Activated,43004.57679,Customer,en,Registered,Registered,NULL,1,3,2
+653377f8-ee50-4230-ae87-4ff9af596188,Active,Activated,45093.52095,Customer,pt,Registered,Registered,NULL,1,3,1
+857ea118-a836-45d6-b554-c908af18eee1,Inactive,Invited,43748.05633,Customer,en,Registered,No Access,NULL,1,3,3
+33d4bd2d-78b2-4ed5-9023-4564b50e2152,Active,Activated,44215.9786,Customer,es,Registered,Registered,NULL,4,3,5
+6283d187-7c3d-4a74-8ec2-b66fe54c01ab,Inactive,Invited,43752.5877,Customer,en,Registered,Registered,NULL,4,3,3
+98e41caf-cec1-46ac-bc54-6d1c3b6ed908,Active,Activated,42481.87901,Customer,en,Registered,Registered,NULL,1,3,2
+eec99b1c-e95b-446c-8750-7928f81ac53a,Active,Activated,43917.83409,Customer,en,Registered,Registered,NULL,2,3,
+20bee4cb-4f42-45e5-a75a-ffb45d712ccb,Active,Activated,44404.04826,Customer,pt,Registered,Registered,NULL,1,4,1
+51dd8cb8-3b65-4905-8986-585261243af9,Active,Activated,43588.70025,Customer,pt,Registered,Registered,NULL,1,4,5
+ed49e365-5f5f-4347-9ed5-6f130fa37b7d,Inactive,Invited,44021.63351,Customer,pt,Registered,Registered,NULL,1,4,1
+14c0a83e-874f-4b9d-93b9-74c957a02135,Active,Activated,45021.03346,Customer,pt,Registered,Registered,NULL,2,1,1
+e8cc2db9-e576-4c63-bd3b-934f45e86e92,Inactive,Invited,43914.66058,Customer,es,Registered,Registered,NULL,2,2,4
+f3f6c0e8-487f-4099-8fca-fc63f8ebd0c2,Inactive,Invited,44168.71345,Customer,en,Registered,Registered,NULL,2,1,
+559c0e63-f3f3-4112-89fd-48dff2914b9a,Active,Activated,44490.74507,Customer,en,Registered,Registered,NULL,1,4,2
+dbede53a-946e-4601-b49f-99f9251cc02c,Active,Activated,45040.76931,Customer,pt,Registered,Registered,NULL,3,4,5
+2db20fe9-b84c-4096-9ff1-6a9d8b54b4b9,Active,Activated,45120.75132,Customer,en,Registered,Registered,NULL,4,4,4
+32fe6f58-0a98-4d11-8285-97d3efba69d1,Active,Activated,44048.25807,Customer,en,Registered,Registered,NULL,4,4,1
+375f6bf3-8102-457e-8db1-50c1a4917473,Inactive,Invited,45142.69805,Customer,pt,Registered,Registered,NULL,5,4,4
+82421853-4355-4a7e-8141-21cca12b3f1e,Inactive,Invited,44194.98064,Customer,es,Registered,No Access,NULL,5,4,3
+9d46f4b8-ee3c-474e-b940-3c74bbed84e2,Active,Activated,42384.82169,Customer,en,Registered,Registered,NULL,5,4,
+ab392497-6e79-47a6-bd48-cf45c83e31ac,Active,Activated,43692.55558,Customer,en,Registered,Registered,NULL,5,3,
+c9e08b52-f44a-4161-a650-f76bf96f424d,Inactive,Invited,43195.47196,Customer,en,Registered,Registered,NULL,5,3,4
+fb252794-e58e-4698-9180-a6b32a694dbe,Inactive,Invited,44034.90502,Customer,en,Registered,Registered,NULL,5,4,
+9debccd6-75ad-491c-819a-4b2f6d4e53d5,Inactive,Invited,44182.99052,Consultant,en,Registered,Registered,NULL,2,3,1
+e897893f-e303-45a6-9725-b00e64fd3b63,Inactive,Invited,44449.82449,Customer,es,Registered,Registered,NULL,2,3,2
+35789503-09fb-43de-9327-287002d1503e,Active,Activated,44442.58377,Customer,en,Registered,Registered,NULL,1,1,2
+c8231b59-54e6-453d-b1a2-82dfa825307c,Active,Activated,44672.00058,Customer,en,Registered,Pending Deactivation,NULL,3,1,1
+e4106847-66be-4d25-8a0d-ead2cfbb434e,Active,Activated,44985.70904,Customer,pt,Registered,Registered,NULL,3,1,4
+028bb380-715e-44e3-ac2a-7c1e41347490,Active,Activated,43613.65508,Customer,en,Registered,Registered,NULL,4,1,2
+036a8e7c-0bdc-4067-824e-4fbd0d5c29ac,Inactive,Invited,44672.25495,Customer,en,Registered,Registered,NULL,4,2,1
+4d7c625a-7a94-4cd0-a9f8-d954024d78ac,Active,Activated,43533.15475,Customer,es,Registered,Registered,NULL,4,2,4
+7aaf0998-02d5-43f2-aa74-d48bae8cc564,Inactive,Invited,44936.95463,Customer,en,Registered,No Access,NULL,1,1,5
+b911519c-08a9-406a-a324-d43573e08bad,Active,Activated,44105.44455,Customer,es,Registered,Registered,NULL,1,1,2
+8dccf252-aba9-41a2-9e6c-1cbea687087f,Inactive,Invited,45134.93766,Customer,en,Registered,No Access,NULL,5,1,1
+9300f8fb-cb75-4551-ba96-5cf0057a27a5,Inactive,Invited,44671.95113,Customer,en,Registered,Registered,NULL,5,1,4
+cd0d94c6-a793-47e4-8884-de0b355e9374,Active,Activated,42492.76351,Customer,en,Registered,Registered,NULL,5,1,3
+fa056000-73a4-412a-955b-69479affc353,Active,Activated,44005.50946,Customer,en,Registered,Registered,NULL,5,5,
+1fa2700c-3333-491e-885e-e617f4fe37b7,Active,Activated,45355.93236,Customer,en,Registered,NULL,NULL,,3,3
+d5115914-c23e-42c8-97ea-cb8e14cd737c,Active,Activated,45232.66016,Customer,en,Registered,NULL,NULL,,1,3
+ad8ea109-d212-461e-a955-b0e4fa8e6d5f,Active,Activated,44294.87284,Consultant,en,Registered,NULL,NULL,1,1,2
+08d975d5-45e6-4844-a49a-a0313f8f5fa2,Active,Activated,44694.886,Customer,en,Registered,NULL,NULL,1,1,2
+0ae5eb15-fd94-4279-89de-5ea1eeead45a,Active,Activated,45251.58674,Customer,en,Registered,NULL,NULL,1,1,1
+0c1b25e6-ce23-4de5-9b52-7dc74bb2fcbd,Active,Activated,44196.05396,Customer,en,Registered,NULL,NULL,1,1,4
+126e62af-943f-4db0-9fcb-cc6c9df5d04e,Active,Activated,44324.14629,Customer,en,Registered,NULL,NULL,1,1,1
+181e87e7-7a0c-4450-ad3d-4fc6d8128f0b,Active,Activated,44784.70768,Customer,en,Registered,NULL,NULL,1,,3
+1d90c3f5-573b-4b1a-911e-76ef6fe4912c,Active,Activated,44090.71006,Customer,en,Registered,NULL,NULL,1,,4
+1f4cbfb3-eb35-4cb2-90a7-b362909bdb4f,Active,Activated,44622.78148,Customer,en,Registered,NULL,NULL,1,,3
+258a6a9b-be15-460a-a3cb-4e8890e01d90,Active,Activated,44910.65897,Customer,en,Registered,NULL,NULL,1,,4
+283dd04e-1546-4246-a530-1acebbf1983f,Active,Activated,44126.74644,Customer,en,Registered,NULL,NULL,1,,1
+32e89085-8e03-4f18-b679-e3575cb714e2,Active,Activated,43979.78458,Customer,en,Registered,NULL,NULL,1,,2
+35f11f68-1ef9-4256-a87d-b24f8f45c6f5,Active,Activated,43747.7938,Customer,en,Registered,NULL,NULL,1,,5
+5f4832fb-3d0e-4390-91cf-845b5f948ffb,Active,Activated,44608.70311,Customer,en,Registered,NULL,NULL,1,,1
+9211cba7-f796-4725-8a0a-805c308e2309,Active,Activated,44289.78012,Customer,en,Registered,NULL,NULL,1,,4
+a23a80d5-5c9e-4ee0-8b4c-66c69d0409a5,Inactive,Invited,42964.82648,Customer,en,Registered,NULL,NULL,1,,
+ae781720-c1fa-49f7-8ee0-588b1e0ab489,Active,Activated,45259.83709,Customer,en,Registered,NULL,NULL,1,,2
+b0793117-18ba-4c58-a2f1-31281dde0867,Active,Activated,44818.56163,Customer,en,Registered,NULL,NULL,1,,5
+b0fe20b0-7106-4f2d-a602-dc92e384a170,Active,Activated,44391.6486,Customer,en,Registered,NULL,NULL,1,,3
+b6a1a23c-0c17-4869-ac6c-c1a9b789d906,Active,Activated,45091.87561,Customer,en,Registered,NULL,NULL,1,,2
+d4ab0885-7ea0-4de3-8004-d1cb8d41e727,Active,Activated,45311.0626,Customer,en,Registered,NULL,NULL,1,,2
+d62cb140-3a61-4c5d-9a5e-4eb2b97a75ba,Active,Activated,45357.89682,Customer,en,Registered,NULL,NULL,1,,4
+d6fb2022-710f-4349-ae1f-41f0e9063c0e,Active,Activated,44252.01992,Customer,en,Registered,NULL,NULL,1,,4
+d742fd52-ba7f-4923-b7c7-dc0194f7c20d,Active,Activated,44875.65438,Customer,en,Registered,NULL,NULL,1,,3
+db5e0d17-db24-410b-9a23-07a207ff4545,Active,Activated,44357.91616,Customer,en,Registered,NULL,NULL,1,,3
+de9313d3-156e-4cd9-b51e-14ce3617795f,Active,Activated,45370.67371,Customer,en,Registered,NULL,NULL,1,,2
+ea10364e-e359-40db-a8cc-bdb126a1bdc8,Active,Activated,45252.69167,Customer,en,Registered,NULL,NULL,1,,5
+f17e06d6-830f-4b00-9095-9568ada92811,Inactive,Invited,42538.60161,Customer,en,Registered,NULL,NULL,1,,
+f738df18-cc93-4ef8-aeef-fae915b04f8c,Active,Activated,44803.20658,Customer,en,Registered,NULL,NULL,1,,
+fc6e3e0e-0a9f-4ec2-8174-fa6be5cc60ac,Active,Activated,44319.63305,Customer,en,Registered,NULL,NULL,1,,
+18e5a071-a344-4081-bd31-b813ba053e83,Active,Activated,44196.01212,Consultant,en,Registered,NULL,NULL,2,,2
+bb43da8a-e77f-4486-8ac8-632bd882dc30,Active,Activated,44413.54799,Consultant,en,Registered,NULL,NULL,2,,3
+f276d16c-2b01-4661-86d3-0637f62f2e7f,Active,Activated,45365.0445,Consultant,en,Registered,NULL,NULL,2,,4
+0d14bfb4-10da-4f4c-9195-6a905cfdf843,Active,Activated,45039.70535,Customer,en,Registered,NULL,NULL,2,,1
+2db6a1d7-0ac6-4868-98a6-194124acecfc,Active,Activated,44312.84461,Customer,en,Registered,NULL,NULL,2,,2
+3a52589b-4f2b-48dc-94f1-2f272d1c749e,Active,Activated,44502.77819,Customer,es,Registered,NULL,NULL,2,,3
+5105cc02-3699-4d8f-8100-40c3d16dd6f0,Active,Activated,44471.0893,Customer,en,Registered,NULL,NULL,2,,1
+5c7e3a0f-3ba6-4cef-a784-16014a661ba0,Active,Activated,44655.74514,Customer,en,Registered,NULL,NULL,2,,3
+5fd2f119-cb8a-443e-b09a-62a53e64ed58,Active,Activated,44196.0498,Customer,en,Registered,NULL,NULL,2,,1
+6112f79d-1caf-431c-8bfa-8c9d6291a5aa,Active,Activated,44182.82327,Customer,en,Registered,NULL,NULL,2,,2
+97933cbc-46bf-4f09-8ec8-5158ed6a6dd2,Active,Activated,44346.45613,Customer,en,Registered,NULL,NULL,2,,4
+a01d0e0b-839a-427f-9f2b-e81d9bdf6353,Active,Activated,45251.51203,Customer,en,Registered,NULL,NULL,2,,
+a0f36609-7f26-4dc1-b1fa-c29fa089b44b,Active,Activated,44816.73008,Customer,en,Registered,NULL,NULL,2,,
+abff6add-e332-4f8d-9692-ad6bf21d19c7,Inactive,Invited,44956.91685,Customer,en,Registered,NULL,NULL,2,,
+b8ca47a7-8f1a-4e64-845f-ccbabc124732,Active,Activated,45232.75597,Customer,en,Registered,NULL,NULL,2,,1
+d1faba61-6fc6-4e2e-92e1-fc9309f5362b,Active,Activated,44630.51791,Customer,en,Registered,NULL,NULL,2,,5
+db765c00-25a4-4662-b712-9ba88af2a91b,Active,Activated,45191.69504,Customer,en,Registered,NULL,NULL,2,,4
+debc1a30-322b-4713-af0c-bd00881239a4,Active,Activated,45294.7896,Customer,en,Registered,NULL,NULL,2,,5
+e12774ad-2b1c-4a5c-a08f-cc2320fe29d2,Inactive,Invited,41481.45732,Customer,en,Registered,NULL,NULL,2,,4
+07fadef8-2ec2-4db5-9032-59fc3060244e,Inactive,Invited,43571.89356,Customer,en,Registered,NULL,NULL,3,,2
+111891d7-c7c5-4eb6-a8b3-55b3630f871b,Active,Activated,44414.74151,Customer,en,Registered,NULL,NULL,3,,5
+1f293b55-b7aa-4fc8-9295-5b336c27a08b,Active,Activated,44076.66471,Customer,en,Registered,NULL,NULL,3,,2
+239df625-8b13-460d-bda9-583ab78c5ae1,Inactive,Invited,44203.1855,Customer,en,Registered,NULL,NULL,1,,5
+2d2ff18c-d09d-47b2-ab9c-3cf69424e47a,Active,Activated,44256.77847,Customer,en,Registered,NULL,NULL,1,,5
+339f795b-3f82-4ff0-a656-1f5bdf71f600,Active,Activated,44149.84219,Customer,en,Registered,NULL,NULL,1,,2
+97c98b6c-150c-4027-9609-3cc14d4ea1cd,Inactive,Invited,45349.66224,Customer,en,Registered,NULL,NULL,1,,4
+9f107f2b-6b75-486b-85ce-8c214a6c4626,Active,Activated,44931.62857,Customer,en,Registered,NULL,NULL,1,,
+9f18c451-b5f4-4526-8f36-215510dace22,Active,Activated,44630.92624,Customer,en,Registered,NULL,NULL,1,,
+a28f9ae3-a198-4aeb-ae7d-5744b79bcec1,Active,Activated,44386.56849,Customer,en,Registered,NULL,NULL,1,,
+ac4c5a2e-7fc2-483c-ac44-ff86f6be9475,Active,Activated,45267.63856,Customer,en,Registered,NULL,NULL,1,,3
+b99fb34c-0a70-4414-9426-1928306bd10a,Active,Activated,45316.61773,Customer,en,Registered,NULL,NULL,3,,2
+dc122098-91fb-411d-ae45-3e28d90e6b2b,Active,Activated,45357.80621,Customer,en,Registered,NULL,NULL,3,,3
+fef9df76-9805-4fd4-8866-ba2adfe76f14,Active,Activated,45175.62522,Customer,es,Registered,NULL,NULL,3,,
+383c2e1c-6f1d-47d3-9482-f2898bb1d8fe,Inactive,Invited,44133.60878,Consultant,en,Registered,NULL,NULL,4,,3
+00b55496-e906-4e88-b598-14230ae4e2a1,Inactive,Invited,44144.60649,Customer,en,Registered,NULL,NULL,4,,3
+01d71c5b-71e2-41d6-ab2e-1a2dda776636,Active,Activated,44961.66796,Customer,en,Registered,NULL,NULL,4,,3
+17581e2b-f9a4-4069-a6d0-fd2cbfc3be5f,Active,Activated,45203.9924,Customer,en,Registered,NULL,NULL,4,,2
+3967ca8a-46ac-4b7f-a858-9264af0f83cc,Active,Activated,45170.58154,Customer,en,Registered,NULL,NULL,4,,2
+d4b2e799-79ae-48e1-a995-5a40c061aa98,Active,Activated,45251.49335,Customer,en,Registered,NULL,NULL,1,,2
+dbd256db-922a-499d-9307-6a232e652473,Active,Activated,44152.65127,Customer,en,Registered,NULL,NULL,1,,3
+dfea8391-9f60-4419-b138-c9a0ccde8f25,Active,Activated,44578.6522,Customer,en,Registered,NULL,NULL,1,,3
+e36a046f-e57d-4351-94bc-509dbeeafe06,Active,Activated,44203.1352,Customer,en,Registered,NULL,NULL,1,,3
+e7d70412-3573-4b6d-95ab-db2acb549dcd,Inactive,Invited,44196.0649,Customer,en,Registered,NULL,NULL,4,,4
+d5ec3a19-5e7b-4f25-8e76-a31920efa179,Active,Activated,45369.64513,Introducing Broker,en,Registered,NULL,NULL,4,,
+1c84a5b9-4d5f-4928-9f70-26cbfa253793,Inactive,Invited,45044.05665,Customer,en,Registered,NULL,NULL,5,,5
+2f32367b-57d8-4b7a-86b8-855f79fbaf77,Active,Activated,44050.58602,Customer,en,Registered,NULL,NULL,5,,4
+9120192d-4cef-4089-b0e5-b709ac0248bf,Active,Activated,44412.14323,Customer,en,Registered,NULL,NULL,5,,4
+9320785a-28f5-467f-997a-7ddc5a2cf122,Inactive,Invited,45316.91609,Customer,en,Registered,NULL,NULL,1,,1
+b2d581b4-bbf3-4793-872a-8adac664bbdd,Inactive,Invited,44201.15432,Customer,en,Registered,NULL,NULL,1,,3
+e2b88886-72fe-4490-a0ce-a8121c7f4ad8,Inactive,Invited,44336.93804,Customer,en,Registered,NULL,NULL,5,,3
+525a6922-622f-402a-9668-7a4be3483ffd,Active,Activated,44903.47494,Customer,en,Registered,NULL,NULL,,,2
+8f2da6de-013d-4f2f-9862-f1267cc7e4de,Active,Activated,45253.46361,Customer,fr,Registered,NULL,NULL,,,1
+99d49dfd-9ddb-4823-8399-bd22023cc68f,Active,Activated,42521.80223,Customer,en,Registered,NULL,NULL,,,3
+a960c13e-0e96-40fe-a883-7d8806e57a3a,Active,Activated,45251.47869,Customer,en,Registered,NULL,NULL,,,
+b34dd235-bcb7-4978-8d8d-e091e1b384d5,Inactive,Invited,44634.75629,Customer,en,Registered,NULL,NULL,,,4
+e82671d9-a227-4b31-883c-043255672a1c,Inactive,Invited,45300.58145,Customer,en,Registered,NULL,NULL,,,1
+f7604b28-babf-4993-b7bb-4815ab8d3f2e,Active,Activated,45314.54203,Customer,en,Registered,NULL,NULL,,,
+bc5e1845-2b8e-4efa-aa3a-b136f82fd9cb,Inactive,Invited,45328.63786,Customer,pt,Pending Deactivation,Registered,NULL,1,1,4
+03ed6394-0aa0-485f-8e26-a7a75ddb1424,Inactive,Invited,42671.79718,Customer,en,NULL,Registered,NULL,,1,2
+11ec2eed-b944-4229-badf-6e4f1a7f66ae,Inactive,Invited,43533.6468,Customer,en,NULL,Registered,NULL,,1,1
+70d32879-effc-4e2c-b42c-f769f5e1bf3b,Active,Activated,44517.57483,Customer,en,NULL,No Access,NULL,,1,4
+aa880e64-4ca5-41cc-bec4-fed43fdeee41,Inactive,Invited,42438.95686,Customer,en,NULL,Registered,NULL,,1,
+ae59099c-2cec-414c-a55c-077fc790682c,Active,Activated,42646.58537,Customer,pt,NULL,Registerred,NULL,,1,1
+b5631f00-80b2-4d8f-acfe-1a062779b610,Inactive,Invited,43266.89312,Customer,en,NULL,Registered,NULL,,1,3
+dbb33caf-fdca-4a89-8a1d-b069652d3e47,Inactive,Invited,43533.12972,Customer,en,NULL,Registered,NULL,,1,2
+e9d1c97e-4900-48a0-8b7e-ff34184f5c5b,Inactive,Invited,43501.53236,Customer,pt,NULL,Registerred,NULL,,1,1
+f544c40f-f2a3-4361-8645-fa857ce4c639,Inactive,Invited,43533.88001,Customer,en,NULL,Registered,NULL,,1,
+7aa04c3b-470b-4eb7-b38e-e99a7642c4ee,Inactive,Invited,43533.20234,Consultant,en,NULL,No Access,NULL,,2,5
+8b1b5425-b91c-453c-b21b-af1e19abd182,Active,Activated,44544.95164,Consultant,en,NULL,No Access,NULL,,2,2
+aebd8fb0-8050-4765-adea-1a3ac8a360cc,Inactive,Invited,42622.87377,Consultant,en,NULL,Registered,NULL,,2,4
+cf1e7072-32b4-450a-98b0-9da9e2ec1ffb,Inactive,Invited,42872.5697,Consultant,en,NULL,Registered,NULL,,2,3
+6131f4b7-cc1e-4998-be3b-db5ae5c6bce5,Inactive,Invited,43193.61412,Customer,es,NULL,Registered,NULL,,2,4
+74c86a9e-6a38-4e2e-89f8-775f04872cc8,Active,Activated,44287.67062,Customer,en,NULL,No Access,NULL,,2,1
+82bad732-cb39-4fff-92d4-e1f36720136d,Inactive,Invited,44943.74988,Customer,en,NULL,No Access,NULL,,2,5
+a69cf39e-bead-49c7-9015-16ab779e2247,Inactive,Invited,42922.76987,Customer,es,NULL,Registerred,NULL,,2,
+c8c02afc-5738-4ae8-8e87-463d8d4f1f5f,Inactive,Invited,43533.88144,Customer,en,NULL,Registered,NULL,,1,2
+cdf9c8f6-c467-4771-b2f2-90425a6271d1,Inactive,Invited,42488.90553,Customer,en,NULL,Registered,NULL,,2,3
+04c09b9e-dd6c-4584-b809-1275ef44d313,Inactive,Invited,42622.8793,Customer,en,NULL,Registered,NULL,,1,5
+75922939-a264-4ce5-836e-e91bc679208d,Inactive,Invited,42488.9354,Customer,en,NULL,No Access,NULL,,3,2
+77e5c041-8ca0-440f-b11e-bff35589e13c,Active,Activated,44218.77026,Customer,en,NULL,No Access,NULL,,1,2
+abd99dfb-33ef-4927-b44f-1e91399b2b80,Inactive,Invited,42425.89757,Customer,en,NULL,Registered,NULL,,3,
+c732f093-d1b3-40b1-9fcd-0a711d97c5a7,Inactive,Invited,44201.13567,Customer,en,NULL,Pending Deactivation,NULL,,3,4
+76e985f8-01bf-4518-ab77-eb42ef09e71e,Active,Activated,45335.72404,Consultant,en,NULL,No Access,NULL,,1,5
+14828d54-9e1b-41e0-b73f-865b86fd4978,Inactive,Invited,41927.7817,Customer,en,NULL,Registered,NULL,,2,1
+52d1c8d6-06ef-446b-8374-6d2ec7d9f8b6,Inactive,Invited,42836.89445,Customer,en,NULL,Registered,NULL,,3,3
+75b65cab-31bb-4869-9a07-cdb0da06c44d,Inactive,Invited,42748.54377,Customer,en,NULL,No Access,NULL,,1,2
+784dda05-01ed-4673-9d98-c4a6626f5338,Inactive,Invited,44552.01021,Customer,en,NULL,No Access,NULL,,4,3
+7bd37e2a-a964-44d3-b279-d371d5a1be4e,Inactive,Invited,42488.9249,Customer,en,NULL,No Access,NULL,,1,2
+84d09423-d571-425b-9ad0-94c784046d21,Active,Activated,45351.67565,Customer,en,NULL,No Access,NULL,,1,2
+c6929baf-03c8-4878-9fa3-58d9994b7cfa,Active,Activated,44694.88738,Customer,en,NULL,Pending Deactivation,NULL,,1,1
+d09e101d-e676-4eeb-bc2b-04b3ab98c05b,Inactive,Invited,42488.90529,Customer,en,NULL,Registered,NULL,,2,3
+ee48e46a-9e14-438b-afd5-5a08b6b4a1c3,Inactive,Invited,42738.7877,Customer,en,NULL,Registered,NULL,,1,
+6ea5b7c6-2576-4c8c-bed2-d1f72b785927,Active,Activated,44323.87973,Customer,en,NULL,No Access,NULL,,1,1
+a72e5dcd-f3a2-418e-a251-00b7d8a0fc2b,Inactive,Invited,42431.77189,Customer,en,NULL,Registered,NULL,,1,
+f10c8357-1cd4-4968-9e52-bfd579faa296,Active,Invited,42488.97785,Customer,en,NULL,Registered,NULL,,1,
+f8e83b53-1e84-4b8b-bc5a-b03bfb60bae8,Inactive,Invited,44628.89845,Customer,es,NULL,NULL,NULL,1,,
+ff6703ec-1aad-43bd-b669-f432849ab412,Inactive,Invited,44497.68912,Customer,es,NULL,NULL,NULL,1,,
+111435fe-4a21-44ea-942c-230623904391,Active,Activated,43236.82909,Introducing Broker,es,NULL,NULL,NULL,1,,
+bba886d8-8beb-4b31-b9a5-c87476f31a22,Inactive,Invited,44897.84927,Customer,es,NULL,NULL,NULL,2,,1
+549b3795-585d-4fd7-a3d5-f4e7d7c4a975,Active,Activated,45324.68982,Consultant,es,NULL,NULL,NULL,,,4
+f3a8bacd-1e4d-4174-9942-a8c4788b2d4b,Inactive,Invited,44498.60403,Consultant,en,NULL,NULL,NULL,,,5
+10733a03-3cf8-485e-88cb-f6d13ade9b8e,Active,Activated,44749.81364,Customer,es,NULL,NULL,NULL,,,1
+3abc1247-bae2-410d-92f1-6b4d4d79fd98,Active,Activated,44883.77285,Customer,es,NULL,NULL,NULL,,,5
+9538c358-2df4-499b-b048-53cd03a6d98c,Active,Activated,45330.64199,Customer,es,NULL,NULL,NULL,,,1
+98348bb8-1e1b-4920-bf6c-0bb7487a7fb5,Active,Activated,44321.87444,Customer,en,NULL,NULL,NULL,,,1
+d266c20e-2ea2-4ab8-89fe-9bd01656a2f4,Active,Activated,42776.5511,Customer,en,NULL,NULL,NULL,,,5
+a2f69ba6-a099-4c96-9f63-4c57c2642f84,Active,Activated,45232.84031,Consultant,en,NULL,NULL,NULL,,,4
+4806ff79-d3c0-4353-9663-f886d1328532,Inactive,Invited,44033.94105,Consultant,en,No Access,Registered,NULL,,1,1
+44ab2bc6-cc72-4262-a67b-d67c571b9f3a,Inactive,Invited,42842.68126,Customer,pt,No Access,Registered,NULL,,1,4
+4aedccb0-162b-4eb6-ae58-09f9c29dae41,Active,Activated,43744.96245,Customer,en,No Access,NULL,NULL,,1,4
+3c05c816-9c59-424d-a57f-40962158eaeb,Active,Activated,43532.87647,Customer,en,No Access,Registered,NULL,,2,5
+3dc4ca95-1903-47af-8e5b-dac1fef8c081,Active,Activated,43382.8455,Customer,en,No Access,Registered,NULL,,2,4
+40447b19-9984-4da6-9e67-0ab1a3e3846e,Active,Activated,41901.57716,Customer,en,No Access,Registered,NULL,,1,2
+4718acc3-8c2c-4edd-b3ac-5ab1b1a4573b,Active,Activated,45202.57937,Customer,en,No Access,Registered,NULL,,2,3
+4ae41e18-1f13-4a5f-afcd-121fcd3c833f,Inactive,Invited,43483.75743,Customer,en,No Access,Registered,NULL,,2,3
+4b68e0b3-c996-4495-ab8c-5510e53606d6,Inactive,Invited,44671.82713,Customer,en,No Access,Registered,NULL,,2,1
+3f47629e-bbdd-4729-a89b-2dc991b3c146,Inactive,Invited,44203.13131,Consultant,en,No Access,NULL,NULL,,1,1
+48e8be3c-ecb2-4158-b6dd-4f35d205745e,Inactive,Invited,42646.78482,Consultant,en,No Access,Registered,NULL,,3,4
+3fefeaae-8576-4bd4-b885-96981227e622,Active,Activated,45062.5541,Customer,pt,No Access,Registered,NULL,,1,1
+47eac508-2965-40a2-977f-8a5c0f4e7bf6,Inactive,Invited,45145.5965,Customer,pt,No Access,Registered,NULL,,1,3
+48d956f9-470e-444a-811c-3fc823d45701,Inactive,Invited,42472.78733,Customer,en,No Access,Registerred,NULL,,1,4
+401c8616-50ab-4152-a098-bd74930cd94f,Active,Activated,42634.88782,Customer,en,No Access,Registered,NULL,,1,1
+43df58fe-6863-4de7-b70e-973d548de97d,Active,Activated,44211.76573,Customer,en,No Access,NULL,NULL,,,1
+4524e91b-fabd-408c-b6ee-4792332915aa,Active,Activated,45083.24563,Customer,es,No Access,NULL,NULL,,,5
+434a14d7-8682-4915-bd2b-2905846e3f09,Inactive,Invited,44065.58513,Customer,en,No Access,NULL,NULL,5,,5
+3b1c8036-a8b1-468a-ae55-52e40bc4921e,Active,Activated,45267.84098,Customer,en,No Access,NULL,NULL,,,3
+4401b018-bac7-4724-a2e7-34f900bb06e4,Inactive,Invited,44873.57543,Customer,en,No Access,NULL,NULL,,,2
+c6374bf7-9038-4e75-aa3f-4c0de9acc19d,Inactive,Invited,45112.8898,Customer,es,Access Requested,Pending Deactivation,NULL,,1,3
+c66ef97f-f4d3-4064-b99c-716fb2390dce,Active,Activated,43913.9576,Customer,fr,Access Requested,Pending Deactivation,NULL,2,1,5
+c58d5224-c739-44e0-8860-a3ac0e1e18dc,Active,Activated,44516.8137,Introducing Broker,en,Access Requested,Pending Deactivation,NULL,,1,
+c37cbdf3-fc9f-46d8-9ea9-fd010bad5f26,Active,Activated,44104.9655,Customer,en,Access Requested,Registered,NULL,,2,1
+bd2b9aa8-86bb-4b5a-8886-9115d6472eaa,Inactive,Invited,45143.16955,Customer,pt,Access Requested,Registered,NULL,,3,4
+c3f22df4-231f-451a-97d8-5ee80e6f5f32,Inactive,Invited,45143.06539,Consultant,pt,Access Requested,Pending Deactivation,NULL,3,2,2
+bd35c2ec-c71c-4ae9-98c9-5c298d11b7a3,Active,Activated,43130.7719,Customer,en,Access Requested,Registered,NULL,,1,2
+c245fc79-bcff-498e-b7a6-23084214bf8d,Inactive,Invited,44203.18298,Customer,en,Access Requested,NULL,NULL,1,,2
+bd2d037a-f926-4c06-b1c7-670ac7ad3985,Inactive,Invited,44606.8438,Customer,pt,Access Requested,NULL,NULL,,,3

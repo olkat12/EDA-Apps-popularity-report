@@ -1,0 +1,745 @@
+---
+title: "Popularity of apps among customers"
+author: "Aleksandra Talaga"
+date: "2024-04-26"
+output: 
+  html_document:
+    toc: true
+    toc_float: 
+      smooth_scrool: true
+    df_print: paged
+    theme: united
+---
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+
+# Necessary libraries
+
+library(dplyr)
+library(mice)
+library(finalfit)
+library(ggplot2)
+library(knitr)
+library(knitr)
+library(tidyr)
+library(cowplot)
+
+
+apps <- read.csv("AppUsers_2024.04.24.csv")
+customers <- read.csv("customers_info_2024.04.22.csv")
+
+
+# merging data to get one table with all information
+data <- inner_join(apps, customers, by = "CDSContactID")
+
+# detecting which clients aren't in table  with apps
+customers_without_apps <- anti_join(customers, apps, by = "CDSContactID")
+```
+
+<br><br>
+
+# 1 Introductory information
+
+<br>
+
+## 1.1 How many customers uses apps?
+
+<br>
+
+Joining information about apps users with information about all clients shows that 261 out of all 506 clients are associated with apps. It is approximately **52% of all clients**.<br><br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+
+proportion <- data.frame(category = c("Apps users", "Other clients"),
+                        values = c(261, 506 - 261))
+
+ggplot(proportion,
+       aes(x = "",
+           y = values,
+           fill = category)) +
+  geom_bar(stat = "identity",
+           color = "black") +
+  coord_polar(theta = "y") +
+  labs(title = "Proportion of apps users and other clients") +
+  scale_fill_manual(values = c("#90EE90", "#DE4F4D")) +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+  
+```
+
+Next statistics will concern only apps users.
+
+<br><br>
+
+
+## 1.2 Are all information available?
+
+<br>
+
+It has been identified that there are some missing values pertaining to customers' satisfaction. It could happen, because some clients may not have access to all types of applications. Additionally, some customers might not have responded to all survey questions.<br><br>
+
+The map shows graphically which values are not available: 
+<br><br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+columns <- colnames(data)[-1]
+data %>%
+  missing_plot(columns, "CDSContactID") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+
+
+```{r warning=FALSE, echo = FALSE, message=FALSE, results='hide'}
+
+str(data)
+
+# counting missing or empty values
+
+missing_or_empty <- data.frame(colnames(data))
+count_empty <- c(rep(0, ncol(data)))
+for(i in 1:ncol(data))
+{
+  count_empty[i] <- sum(is.na(data[[i]]) | data[[i]] == "")
+}
+missing_or_empty <- cbind(missing_or_empty, count_empty)
+colnames(missing_or_empty) <- c("Variable", "NA_Empty")
+
+# I've already changed types of all columns with NA or empty values
+# to factors - now I can replace this empty values with
+# the factor of the lowest level "No_answer"
+
+for (i in c(10, 11, 12, 16))
+{
+  data[[i]][which(is.na(data[[i]]) | data[[i]] == "")] <- "No_answer"
+}
+
+
+# convert all values except ID and RequestedDate to factor
+data[, c(-1, -4)] <- lapply(data[, c(-1, -4)], as.factor)
+
+levels(data$Satisfaction_BuyingApp) <- c("No_answer", "1", "2", "3", "4", "5")
+levels(data$Satisfaction_PayingApp) <- c("No_answer", "1", "2", "3", "4", "5")
+levels(data$Satisfaction_TradingApp) <- c("No_answer", "1", "2", "3", "4", "5")
+levels(data$InterestedInAdditionalProducts) <- c("No_answer", "No", "Yes")
+
+str(data)
+summary(data)
+
+# "Registerred" is probably a misspelling so I change it to "Registered"
+data$PayingApp[data$PayingApp == "Registerred"] <- "Registered"
+
+data$PayingApp[data$PayingApp == "Registerred"] <- NA
+data$PayingApp <- droplevels(data$PayingApp)
+
+summary(data$PayingApp)
+```
+
+<br><br>
+
+# 2 Customer profile analysis
+
+<br>
+
+
+## 2.1 What is the percentage of active and inactive customers?
+
+<br>
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+CDStatus_summary <- data %>%
+  select("CDSStatus") %>%
+  group_by(CDSStatus) %>%
+  summarize(Count = n()) %>%
+  mutate(Proportion = paste0(round(Count / 261 * 100, 2), "%"))
+
+kable(CDStatus_summary)
+```
+
+<br><br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+ggplot(data,
+       aes(x = "",
+           fill = CDSStatus)) +
+  geom_bar(width = 1,
+           color = "black") +
+  coord_polar(theta = "y") +
+  labs(title = "CDSStatus") +
+  scale_fill_manual(values = c("Active" = "#90EE90", 
+                               "Inactive" = "#DE4F4D")) +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+
+<br><br>
+
+## 2.2 What is the status of registration among customers?
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+Registration <- data %>%
+  select("RegistrationStatus") %>%
+  group_by(RegistrationStatus) %>%
+  summarize(Count = n()) %>%
+  mutate(Proportion = paste0(round(Count / 261 * 100, 2), "%"))
+
+kable(Registration)
+```
+
+<br><br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+ggplot(data,
+       aes(x = "",
+           fill = RegistrationStatus)) +
+  geom_bar(width = 1,
+           color = "black") +
+  coord_polar(theta = "y") +
+  labs(title = "Registration status") +
+  scale_fill_manual(values = c("Activated" = "#90EE90", 
+                               "Invited" = "#DE4F4D")) +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+<br>
+
+If a customer has `active` CDS status, it means also `activated` registration status.
+Analogically, if a customer has `inactive` CDS status, it means `invited` Registration status. Only one observation does not match this pattern. One client is invited, but has active CDS status.
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+active_pattern <- data %>%
+  select(CDSStatus, RegistrationStatus) %>%
+  filter((CDSStatus == "Active" & RegistrationStatus == "Invited")
+         | (CDSStatus == "Inactive" & RegistrationStatus == "Activated")) %>%
+  mutate(Count = n())
+
+kable(active_pattern)
+```
+
+<br><br>
+
+## 2.3 What contact type is the most popular?
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+ContactType_summary <- data %>%
+  select("CDSContactType") %>%
+  group_by(CDSContactType) %>%
+  summarize(Count = n())
+
+ggplot(ContactType_summary,
+       aes(x = reorder(CDSContactType, Count),
+           y = Count)) +
+  geom_bar(stat = "identity", 
+           fill = "#F4D5B7",
+           color = "black") +
+  geom_text(aes(label = Count),
+            vjust = -0.5) + 
+  labs(x = "Contact type",
+       y = "Count",
+       title = "Contact type - summary") +
+  theme_light() +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+<br><br>
+
+## 2.4 What language is the most popular?
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+Language_summary <- data %>%
+  select("LanguageCode") %>%
+  group_by(LanguageCode) %>%
+  summarize(Count = n())
+
+ggplot(Language_summary,
+       aes(x = reorder(LanguageCode, Count),
+           y = Count)) +
+  geom_bar(stat = "identity", 
+           fill = "#F4D5B7", 
+           color = "black") +
+  geom_text(aes(label = Count), 
+            vjust = -0.5) + 
+  labs(x = "Language", 
+       y = "Count", 
+       title = "Languages popularity - summary") +
+  scale_x_discrete(labels = c("French", "Spanish", "Portuguese", "English")) + 
+  theme_light() +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+<br><br>
+
+## 2.5 Where do customers come from?
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+Country_summary <- data %>%
+  select("Country") %>%
+  group_by(Country) %>%
+  summarize(Count = n())
+
+ggplot(Country_summary,
+       aes(x = reorder(Country, Count),
+           y = Count)) +
+  geom_bar(stat = "identity", 
+           fill = "#F4D5B7", 
+           color = "black") +
+  geom_text(aes(label = Count), 
+            vjust = -0.5) + 
+  labs(x = "Country", 
+       y = "Count", 
+       title = "Countries of origin - summary") +
+  theme_light() +
+  theme(plot.title = element_text(hjust = 0.5),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+
+
+<br><br>
+
+## 2.6 How does language correlate with contact type?
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+sorted_Contact <- data %>%
+  count(CDSContactType) %>%
+  arrange(n)
+
+ggplot(data,
+       aes(x = factor(CDSContactType,
+                      levels = sorted_Contact$CDSContactType),
+                      fill = LanguageCode)) +
+  geom_bar(color = "white",
+           position = "fill") +
+  labs(title = "Contact type and language proportion",
+       x = "Contact type",
+       y = "Language proportion",
+       fill = "Language code") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+<br><br>
+Clearly English language is preferred among customers irrespective of the contact type. Interestingly, French language is exclusively used in the Customer type, wheras Portugeese is not used in  the Introducing Broker type. 
+<br><br>
+
+## 2.7 What types of apps do customers possess?
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+data_long <- pivot_longer(data,
+                          cols = 7:9,
+                          names_to = "app_type",
+                          values_to = "Status")
+
+ggplot(data_long,
+       aes(x = app_type,
+           fill = Status)) +
+  geom_bar(color = "white",
+           position = "fill") +  
+  labs(x = "Type of app",
+       y = "Status proportion",
+       title = "Different kinds of apps and customers status") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+<br><br>
+All customers have a NULL buying app status. Slightly less than 50% of customers are registered for the paying app, and approximately 60% are registered for the trading app. `Pending deactivation` only relates to the paying app, while `access requested` concerns only the trading app. A similar proportion of customers have no access to both the paying app and the trading app.
+<br><br>
+
+
+
+# 3 Customer satisfaction evaluation
+
+<br>
+
+## 3.1 Buying App satisfaction
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+BA_satisfaction <- data %>%
+  select("Satisfaction_BuyingApp") %>%
+  group_by(Satisfaction_BuyingApp) %>%
+  summarize(Count = n()) %>%
+  mutate(Proportion = paste0(round(Count / 261 * 100, 2), "%"))
+
+kable(BA_satisfaction)
+```
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+
+plot1 <- ggplot(data,
+       aes(x = "",
+           fill = factor(Satisfaction_BuyingApp))) +
+  geom_bar(width = 1,
+           color = "black") +
+  coord_polar(theta = "y") +
+  labs(title = "Satisfaction from Buying App",
+       fill = "Satisfaction level") +
+  scale_fill_brewer(palette = "Greens") +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+plot1
+```
+<br>
+Each possible response has been selected a similar number of times. Only the satisfaction level 4 is chosen by a slightly lower percentage of customers than any other response.
+<br><br>
+
+
+
+## 3.2 Paying App satisfaction
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+PA_satisfaction <- data %>%
+  select("Satisfaction_PayingApp") %>%
+  group_by(Satisfaction_PayingApp) %>%
+  summarize(Count = n()) %>%
+  mutate(Proportion = paste0(round(Count / 261 * 100, 2), "%"))
+
+kable(PA_satisfaction)
+```
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+
+plot2 <- ggplot(data,
+       aes(x = "",
+           fill = factor(Satisfaction_PayingApp))) +
+  geom_bar(width = 1,
+           color = "black") +
+  coord_polar(theta = "y") +
+  labs(title = "Satisfaction from Paying App",
+       fill = "Satisfaction level") +
+  scale_fill_brewer(palette = "Greens") +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+plot2
+```
+<br>
+The paying app receives much higher evaluations from customers compared to the buying app. Nearly 40% of customers rate it at the highest satisfaction level. Additionally, less than 30% of customers did not provide a response.
+<br><br>
+
+## 3.3 Does the status influence Paying App satisfaction?
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+sorted_PayingApp <- data %>%
+  count(PayingApp) %>%
+  arrange(n)
+
+ggplot(data,
+       aes(x = factor(PayingApp,
+                      levels = sorted_PayingApp$PayingApp),
+                      fill = Satisfaction_PayingApp)) +
+  geom_bar(color = "white",
+           position = "dodge2") +
+  labs(title = "Paying App status and satisfaction level count",
+       x = "PayingApp status",
+       y = "Stisfaction level count",
+       fill = "Satisfaction level") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  theme(plot.title = element_text(hjust = 0.5),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+```
+<br><br>
+Surprisingly, only clients with a NULL paying app status evaluate it as a 5. Registered customers either do not provide answers or rate it very low. Other statuses yield diverse responses.
+<br><br>
+
+## 3.4 Trading App satisfaction
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+TA_satisfaction <- data %>%
+  select("Satisfaction_TradingApp") %>%
+  group_by(Satisfaction_TradingApp) %>%
+  summarize(Count = n()) %>%
+  mutate(Proportion = paste0(round(Count / 261 * 100, 2), "%"))
+
+kable(TA_satisfaction)
+```
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+
+plot3 <- ggplot(data,
+       aes(x = "",
+           fill = factor(Satisfaction_TradingApp))) +
+  geom_bar(width = 1,
+           color = "black") +
+  coord_polar(theta = "y") +
+  labs(title = "Satisfaction from Trading App",
+       fill = "Satisfaction level") +
+  scale_fill_brewer(palette = "Greens") +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+plot3
+```
+<br>
+The trading app receives better evaluations than the buying app, but not as high as the paying app. It's notable that this app has the highest percentage of unanswered options. Approximately one-third of all customers rate it at the highest level of satisfaction. However, all other options except for 1 receive similarly low ratings (about 5%), with about 15% assessing it at the lowest level.
+<br><br>
+
+
+## 3.5 Does the status influence Trading App satisfaction?
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+sorted_TradingApp <- data %>%
+  count(TradingApp) %>%
+  arrange(n)
+
+ggplot(data,
+       aes(x = factor(TradingApp,
+                      levels = sorted_TradingApp$TradingApp),
+                      fill = Satisfaction_TradingApp)) +
+  geom_bar(color = "white",
+           position = "dodge2") +
+  labs(title = "Trading App status and satisfaction level count",
+       x = "TradingApp status",
+       y = "Stisfaction level count",
+       fill = "Satisfaction level") +
+  scale_fill_brewer(palette = "Set2") +
+  theme_light() +
+  theme(plot.title = element_text(hjust = 0.5),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+```
+<br><br>
+
+Customers with a NULL status or no access rate the trading app the highest. Registered customers either do not provide answers or their responses are distributed evenly across all options. For all other statuses, there are very few responses, indicating a small number of customers with these status.
+<br><br>
+
+## 3.6 Comparison of satisfaction across all applications
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+plot_grid(plot1, plot2, plot3)
+```
+<br>
+Bringing all the charts together confirms the earlier conclusions: the paying app receives the highest ratings most frequently, while the buying app receives the highest ratings least frequently. Additionally, all three apps have a similar proportion of 1 ratings. However, there is a noticeable difference between ratings 2-4 among buying app and two other apps. There's also a disproportion in the number of customers who chose not to respond.
+<br><br>
+
+
+# 4 Forecasted future analysis
+
+<br>
+
+## 4.1 What is the level of leaving risk among customers?
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+LeavingRisk <- data %>%
+  select("LeavingRisk") %>%
+  group_by(LeavingRisk) %>%
+  summarize(Count = n()) %>%
+  mutate(Proportion = paste0(round(Count / 261 * 100, 2), "%"))
+
+kable(LeavingRisk)
+
+```
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+levels(data$LeavingRisk) <- c("Low", "Medium", "High")
+
+ggplot(data,
+       aes(x = "",
+           fill = factor(LeavingRisk))) +
+  geom_bar(width = 1,
+           color = "black") +
+  coord_polar(theta = "y") +
+  labs(title = "Leaving risk among customers",
+       fill = "Leaving risk") +
+  scale_fill_manual(values = c("Low" = "#90EE90", 
+                               "Medium" = "#FFFF99",
+                               "High" = "#DE4F4D")) +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+<br><br>
+
+## 4.2 Is the level of leaving risk associated with customers' revenue?
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+
+levels(data$Revenue) <- c("Low", "Medium", "High")
+
+ggplot(data,
+       aes(x = factor(Revenue),
+                      fill = LeavingRisk)) +
+  geom_bar(color = "black",
+           position = "fill") +
+  labs(title = "Customers' revenue and proportion of leaving risk",
+       x = "Revenue",
+       y = "Proportion of leaving risk",
+       fill = "Leaving risk") +
+  scale_fill_manual(values = c("Low" = "#90EE90", 
+                               "Medium" = "#FFFF99",
+                               "High" = "#DE4F4D")) +
+  theme_light() +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+<br><br>
+Suprisingly, customers with the lowest revenue have the lowest percentage of high risk of leaving and analogically customers with the highest revenue have also the hishest percentage of high leaving risk. Lowest leaving risk is observed in the group of customers with medium revenue. However, in conclusion, there is no significant difference in the proportion of leaving risk among customers when considering their revenue.
+<br><br>
+
+## 4.3 Is there a relationship between satisfaction of apps and leaving risk?
+
+<br>
+
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+risk1 <- ggplot(data,
+       aes(x = factor(LeavingRisk),
+           fill = Satisfaction_BuyingApp)) +
+  geom_bar(color = "black",
+           position = "fill") +
+  labs(title = "Buying App",
+       x = "Leaving risk",
+       y = "Satisfaction") +
+  scale_fill_brewer(palette = "Greens", guide = "none") + 
+  theme_light() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+risk2 <- ggplot(data,
+       aes(x = factor(LeavingRisk),
+                      fill = Satisfaction_PayingApp)) +
+  geom_bar(color = "black",
+           position = "fill") +
+  labs(title = "Paying App",
+       x = "Leaving risk",
+       y = "Satisfaction") +
+  scale_fill_brewer(palette = "Greens", guide = "none") +
+  theme_light() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+risk3 <- ggplot(data,
+       aes(x = factor(LeavingRisk),
+                      fill = Satisfaction_TradingApp)) +
+  geom_bar(color = "black",
+           position = "fill") +
+  labs(title = "Trading App",
+       x = "Leaving risk",
+       y = "Satisfaction") +
+  scale_fill_brewer(palette = "Greens", guide = "none") +
+  theme_light() +
+  theme(plot.title = element_text(hjust = 0.5))
+  
+
+
+
+plot_grid(risk1, risk2, risk3)
+
+```
+<br><br>
+Differences are evident in the ratings provided by customers for each application (as previously depicted in pie charts). However, there are no notable variations in ratings based on leaving risk. At each level of leaving risk, customers rate the respective application very similarly.
+<br><br>
+
+## 4.4 Is there a relationship between country of origin and leaving risk?
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+ggplot(data,
+       aes(x = factor(Country),
+                      fill = LeavingRisk)) +
+  geom_bar(color = "black",
+           position = "fill") +
+  labs(title = "Country of origin and proportion of leaving risk",
+       x = "Country",
+       y = "Proportion of leaving risk",
+       fill = "Leaving risk") +
+  scale_fill_manual(values = c("Low" = "#90EE90", 
+                               "Medium" = "#FFFF99",
+                               "High" = "#DE4F4D")) +
+  theme_light() +
+  theme(plot.title = element_text(hjust = 0.5),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+```
+<br><br>
+Clear differences are noticeable in the level of leaving risk depending on countries. The highest leaving risk is associated with customers from Germany, the Netherlands, and the United States. The lowest risk concerns customers from Switzerland,
+<br><br>
+
+
+## 4.5 Are current customers interested in additional products?
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+Additional <- data %>%
+  select("InterestedInAdditionalProducts") %>%
+  group_by(InterestedInAdditionalProducts) %>%
+  summarize(Count = n()) %>%
+  mutate(Proportion = paste0(round(Count / 261 * 100, 2), "%"))
+
+kable(Additional, col.names = c("Interested", "Count", "Proportion"))
+```
+
+<br>
+
+```{r warning=FALSE, echo = FALSE, message=FALSE}
+
+ggplot(data,
+       aes(x = "",
+           fill = InterestedInAdditionalProducts)) +
+  geom_bar(width = 1,
+           color = "black") +
+  coord_polar(theta = "y") +
+  labs(title = "Proportion of customers interested in additional products",
+       fill = "Interested") +
+  scale_fill_manual(values = c("Yes" = "#90EE90", 
+                               "No_answer" = "white",
+                               "No" = "#DE4F4D")) +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+<br>
+More than 40% of customers did not answer the question. However, among those who provided answers, the majority expressed interest in additional products. Only less than 15% of customers showed no interest in buying them.
+
+<br><br>
+
+# 5 Other data sources
+
+<br>
+In addition to the data provided in the attachment, there are several other data sources which could be used to further assess the popularity of the company's apps among customers:<br>
+- accessing data from app stores such as download rankings, keyword searches or user reviews can offer valuable information about app popularity and satisfaction levels<br>
+- conducting surveys among app users to gather feedback, satisfaction levels, and suggestions for improvement can provide direct insights into customer preferences<br>
+- comparing the company's app performance statistics with competitors can offer benchmarking insights and identify areas of advantage or improvement.
+
+
+
+
